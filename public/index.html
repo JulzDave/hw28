@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hw - Lesson 28 - SQL</title>
+</head>
+<style>
+body{
+    background: black;
+    color: greenyellow;
+    font-family: monospace;
+    zoom: 175%;
+}
+
+#form1{
+    width: 201px;
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+    }
+
+input[type='submit']{
+    display: block;
+    margin: auto;
+    position: relative;
+    right: 18px;
+    background: greenyellow;
+    color: black;
+    font-family: monospace;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: monospace; 
+}
+
+#see_table{
+    margin-bottom:-4px;
+    cursor: pointer;
+}
+</style>
+
+<body>
+        <input id="see_table" type="button" value="See Table" onclick="location.href='/allworkers'" style='background:green;color:yellow;font-size:15px;font-family:monospace;width:113px;' /> 
+
+    <form id="form1" action="/reg" method="post">
+        <h2>Register to join the workers list:</h2>
+    <input type="text" placeholder="Name" name="name"><br/>
+    <input type="number" placeholder="Age" name="age"><br/>
+    <input type="text" placeholder="City" name="city"><br/>
+    <input type="number" placeholder="Salary" name="salary"><br/><br/>
+    <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>
