@@ -19,17 +19,43 @@ body{
     display: block;
     margin: auto;
     margin-top: 10%;
+    background-color: #151515;
+    padding: 11px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: inset 1px 10px 20px 16px black;
     }
 
 input[type='submit']{
     display: block;
     margin: auto;
     position: relative;
-    right: 18px;
     background: greenyellow;
     color: black;
     font-family: monospace;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 6px 3px greenyellow;
 }
+
+input[type='submit']:hover{
+    background: yellow;
+    color: red;
+    box-shadow: 0px 0px 6px 3px yellow;
+}
+
+input[type='text'],input[type='number']{
+    border:none;
+    background:transparent;
+    color:greenyellow;
+    outline:none;
+    border:1px solid green;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    padding-left: 5px;
+    box-shadow: 0px 0px 14px 1px transparent;
+    }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-family: monospace; 
@@ -38,18 +64,37 @@ input[type='submit']{
 #see_table{
     margin-bottom:-4px;
     cursor: pointer;
+    background:green;
+    color:yellow;
+    font-size:13px;
+    font-family:monospace;
+    width:113px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 8px 5px green;
+}
+#see_table:hover{
+    box-shadow: 0px 0px 8px 5px yellowgreen;
+    background:yellowgreen;
+    color:yellow;
+}
+input{
+    box-shadow: 11px 11px 20px 0px black;
+}
+h2{
+    text-shadow: 1px 9px 4px black;
 }
 </style>
 
 <body>
-        <input id="see_table" type="button" value="See Table" onclick="location.href='/allworkers'" style='background:green;color:yellow;font-size:15px;font-family:monospace;width:113px;' /> 
+        <input id="see_table" type="button" value="See Table &#x2633" onclick="location.href='/allworkers'"  /> 
 
     <form id="form1" action="/reg" method="post">
         <h2>Register to join the workers list:</h2>
-    <input type="text" placeholder="Name" name="name"><br/>
-    <input type="number" placeholder="Age" name="age"><br/>
-    <input type="text" placeholder="City" name="city"><br/>
-    <input type="number" placeholder="Salary" name="salary"><br/><br/>
+    <input required type="text" placeholder="Enter Name" name="name"><br/>
+    <input required type="number" placeholder="Enter Age" name="age"><br/>
+    <input required type="text" placeholder="Enter City" name="city"><br/>
+    <input required type="number" placeholder="Enter Salary" name="salary"><br/><br/><br/>
     <input type="submit" value="Register">
     </form>
 
